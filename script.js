@@ -124,3 +124,72 @@ if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
     document.body.classList.add('dark-mode');
     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
+
+
+
+// Add this to your existing script.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simple validation
+                    if (!name || !email || !subject || !message) {
+                        alert('Please fill all fields');
+                        return;
+                    }
+                    
+                    // In a real application, you would send this data to your server
+                    // For this example, we'll just show a success message
+                    
+                    // Show success message
+                    alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+        });
+
+
+
+
+
+
+        document.querySelector('.back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Show/hide back to top button based on scroll position
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.pointerEvents = 'auto';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.pointerEvents = 'none';
+            }
+        });
+
+
+
+        document.querySelector('.back-to-botom').addEventListener('click', () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+        
+        
