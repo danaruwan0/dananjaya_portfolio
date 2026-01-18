@@ -4,13 +4,13 @@ const navbar = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
     const currentScrollPos = window.pageYOffset;
-    
+
     if (prevScrollPos > currentScrollPos) {
         navbar.style.transform = 'translateY(0)';
     } else {
         navbar.style.transform = 'translateY(-100%)';
     }
-    
+
     prevScrollPos = currentScrollPos;
 });
 
@@ -31,16 +31,16 @@ const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -58,12 +58,12 @@ let isDeleting = false;
 
 function type() {
     const currentText = texts[textIndex];
-    
+
     if (isDeleting) {
-        typingTarget.textContent = currentText.substring(0, charIndex-1);
+        typingTarget.textContent = currentText.substring(0, charIndex - 1);
         charIndex--;
     } else {
-        typingTarget.textContent = currentText.substring(0, charIndex+1);
+        typingTarget.textContent = currentText.substring(0, charIndex + 1);
         charIndex++;
     }
 
@@ -84,7 +84,7 @@ type();
 
 // Smooth scrolling for all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
@@ -113,7 +113,7 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDark = document.body.classList.contains('dark-mode');
     themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    
+
     // Save preference
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
@@ -127,69 +127,119 @@ if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
 
 
 
-// Add this to your existing script.js
-        document.addEventListener('DOMContentLoaded', function() {
-            // Contact form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // Simple validation
-                    if (!name || !email || !subject || !message) {
-                        alert('Please fill all fields');
-                        return;
-                    }
-                    
-                    // In a real application, you would send this data to your server
-                    // For this example, we'll just show a success message
-                    
-                    // Show success message
-                    alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
-                    
-                    // Reset form
-                    contactForm.reset();
-                });
-            }
-        });
+// // Add this to your existing script.js
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Contact form submission
+//     const contactForm = document.getElementById('contactForm');
+//     if (contactForm) {
+//         contactForm.addEventListener('submit', function (e) {
+//             e.preventDefault();
+
+//             // Get form values
+//             const name = document.getElementById('name').value;
+//             const email = document.getElementById('email').value;
+//             const subject = document.getElementById('subject').value;
+//             const message = document.getElementById('message').value;
+
+//             // Simple validation
+//             if (!name || !email || !subject || !message) {
+//                 alert('Please fill all fields');
+//                 return;
+//             }
+
+//             // In a real application, you would send this data to your server
+//             // For this example, we'll just show a success message
+
+//             // Show success message
+//             alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
+
+//             // Reset form
+//             contactForm.reset();
+//         });
+//     }
+// });
 
 
 
 
 
 
-        document.querySelector('.back-to-top').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Show/hide back to top button based on scroll position
-        window.addEventListener('scroll', () => {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.style.opacity = '1';
-                backToTop.style.pointerEvents = 'auto';
-            } else {
-                backToTop.style.opacity = '0';
-                backToTop.style.pointerEvents = 'none';
-            }
-        });
-
-
-
-        document.querySelector('.back-to-botom').addEventListener('click', () => {
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
+document.querySelector('.back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-        
-        
+});
+
+// Show/hide back to top button based on scroll position
+window.addEventListener('scroll', () => {
+    const backToTop = document.querySelector('.back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+    } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+    }
+});
+
+
+
+document.querySelector('.back-to-botom').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const form = document.getElementById('contactForm');
+// const submitBtn = form.querySelector('button[type="submit"]');
+// const formMessage = document.getElementById('formMessage');
+
+// form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const formData = new FormData(form);
+//     formData.append("access_key", "c869dc73-137a-4fc4-b78f-6a92eac7eab8");
+
+//     const originalText = submitBtn.textContent;
+//     submitBtn.textContent = "Sending...";
+//     submitBtn.disabled = true;
+//     formMessage.style.display = "none";
+
+//     try {
+//         const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+//         const data = await response.json();
+
+//         if (response.ok) {
+//             formMessage.style.color = "green";
+//             formMessage.textContent = "සාර්ථකයි! ඔබේ පණිවුඩය යවා ඇත.";
+//             formMessage.style.display = "block";
+//             form.reset();
+//         } else {
+//             formMessage.style.color = "red";
+//             formMessage.textContent = "දෝෂයක්: " + data.message;
+//             formMessage.style.display = "block";
+//         }
+//     } catch (error) {
+//         formMessage.style.color = "red";
+//         formMessage.textContent = "කිසිවක් වැරදුනා. කරුණාකර නැවත උත්සාහ කරන්න.";
+//         formMessage.style.display = "block";
+//     } finally {
+//         submitBtn.textContent = originalText;
+//         submitBtn.disabled = false;
+//     }
+// });
