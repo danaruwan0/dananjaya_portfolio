@@ -1,0 +1,968 @@
+/* =========================================================
+   MESSAGE ALERT
+   FULLY RESPONSIVE
+   Desktop • Tablet • Mobile • Small Mobile • Landscape
+========================================================= */
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.alert-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(10px, 3vw, 30px);
+
+    box-sizing: border-box;
+
+    background: rgba(8, 15, 28, 0.72);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SHOW OVERLAY
+========================================================= */
+
+.alert-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   ALERT CARD
+========================================================= */
+
+.message-alert {
+    position: relative;
+
+    width: min(100%, 500px);
+
+    max-height: calc(100dvh - 40px);
+
+    margin: auto;
+
+    padding: clamp(24px, 5vw, 42px);
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f7f9ff 100%
+        );
+
+    border: 1px solid rgba(30, 41, 59, 0.08);
+
+    border-radius: clamp(12px, 2vw, 18px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.28);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transform:
+        translateY(20px)
+        scale(0.97);
+
+    transition:
+        transform 0.3s ease;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(148, 163, 184, 0.4)
+        transparent;
+}
+
+
+/* =========================================================
+   CARD SCROLLBAR
+========================================================= */
+
+.message-alert::-webkit-scrollbar {
+    width: 5px;
+}
+
+.message-alert::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.message-alert::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SHOW CARD
+========================================================= */
+
+.alert-overlay.show .message-alert {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   MAIN ICON
+========================================================= */
+
+.alert-icon {
+    width: clamp(48px, 12vw, 68px);
+    height: clamp(48px, 12vw, 68px);
+
+    margin: 0 auto clamp(13px, 3vw, 20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    font-size: clamp(18px, 4vw, 25px);
+
+    color: #ffffff;
+
+    background: #10b981;
+
+    box-shadow:
+        0 10px 30px rgba(16, 185, 129, 0.35);
+}
+
+
+/* =========================================================
+   ERROR ICON
+========================================================= */
+
+.message-alert.error .alert-icon {
+    background: #ef4444;
+
+    box-shadow:
+        0 10px 30px rgba(239, 68, 68, 0.30);
+}
+
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.alert-status {
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 0 auto clamp(10px, 2vw, 15px);
+
+    padding: 6px 12px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    font-size: clamp(7px, 1.8vw, 10px);
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: clamp(0.4px, 0.15vw, 1px);
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   STATUS ICON
+========================================================= */
+
+.alert-status i {
+    flex-shrink: 0;
+
+    font-size: clamp(8px, 2vw, 11px);
+}
+
+
+/* =========================================================
+   SUCCESS STATUS
+========================================================= */
+
+.success-status {
+    color: #059669;
+
+    background: #ecfdf5;
+}
+
+
+/* =========================================================
+   ERROR STATUS
+========================================================= */
+
+.error-status {
+    color: #dc2626;
+
+    background: #fef2f2;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.message-alert h2 {
+    width: 100%;
+
+    margin: 0 0 clamp(8px, 2vw, 13px);
+
+    color: #1e293b;
+
+    font-size: clamp(19px, 5vw, 28px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.5px;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.alert-description {
+    width: 100%;
+    max-width: 410px;
+
+    margin: 0 auto clamp(18px, 4vw, 28px);
+
+    color: #64748b;
+
+    font-size: clamp(11px, 2.8vw, 15px);
+
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   DESCRIPTION STRONG
+========================================================= */
+
+.alert-description strong {
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ERROR DESCRIPTION STRONG
+========================================================= */
+
+.message-alert.error .alert-description strong {
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.alert-actions {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.alert-primary-btn {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: clamp(43px, 10vw, 54px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(7px, 2vw, 10px);
+
+    padding:
+        0 clamp(10px, 4vw, 20px);
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: clamp(7px, 2vw, 9px);
+
+    font-family: inherit;
+
+    font-size: clamp(10px, 2.5vw, 13px);
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   ERROR BUTTON
+========================================================= */
+
+.message-alert.error .alert-primary-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #dc2626
+        );
+
+    box-shadow:
+        0 8px 22px rgba(239, 68, 68, 0.25);
+}
+
+
+/* =========================================================
+   BUTTON ICON
+========================================================= */
+
+.alert-primary-btn i {
+    flex-shrink: 0;
+
+    font-size: clamp(10px, 2.5vw, 13px);
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .alert-primary-btn:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 12px 28px rgba(37, 99, 235, 0.30);
+    }
+
+    .message-alert.error .alert-primary-btn:hover {
+        box-shadow:
+            0 12px 28px rgba(239, 68, 68, 0.30);
+    }
+
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+========================================================= */
+
+.alert-primary-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
+
+.alert-primary-btn:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ERROR BUTTON FOCUS
+========================================================= */
+
+.message-alert.error .alert-primary-btn:focus-visible {
+    outline-color:
+        rgba(239, 68, 68, 0.25);
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.alert-primary-btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .alert-overlay {
+        padding: 20px;
+    }
+
+    .message-alert {
+        width: min(100%, 480px);
+
+        max-height: calc(100dvh - 40px);
+
+        padding: 34px 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   MAX 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .alert-overlay {
+        padding: 14px;
+    }
+
+    .message-alert {
+        width: 100%;
+
+        max-width: 460px;
+
+        max-height: calc(100dvh - 28px);
+
+        padding: 30px 22px;
+    }
+
+    .alert-description {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PORTRAIT
+   MAX 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .alert-overlay {
+        padding: 12px;
+    }
+
+    .message-alert {
+        max-width: 440px;
+
+        padding: 28px 20px;
+    }
+
+    .alert-status {
+        max-width: 95%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   MAX 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .alert-overlay {
+        padding: 10px;
+    }
+
+    .message-alert {
+        max-width: 100%;
+
+        max-height: calc(100dvh - 20px);
+
+        padding: 26px 17px;
+
+        border-radius: 14px;
+    }
+
+    .alert-icon {
+        margin-bottom: 12px;
+    }
+
+    .alert-status {
+        margin-bottom: 10px;
+
+        padding: 5px 9px;
+
+        border-radius: 7px;
+    }
+
+    .message-alert h2 {
+        margin-bottom: 8px;
+    }
+
+    .alert-description {
+        margin-bottom: 19px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   MAX 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .alert-overlay {
+        padding: 8px;
+    }
+
+    .message-alert {
+        max-height: calc(100dvh - 16px);
+
+        padding: 23px 14px;
+
+        border-radius: 13px;
+    }
+
+    .alert-icon {
+        width: 50px;
+        height: 50px;
+
+        margin-bottom: 11px;
+
+        font-size: 19px;
+    }
+
+    .alert-status {
+        max-width: 100%;
+
+        padding: 5px 8px;
+
+        gap: 5px;
+    }
+
+    .message-alert h2 {
+        font-size: 20px;
+    }
+
+    .alert-description {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+    .alert-primary-btn {
+        min-height: 46px;
+    }
+
+}
+
+
+/* =========================================================
+   360px DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .alert-overlay {
+        padding: 6px;
+    }
+
+    .message-alert {
+        max-height: calc(100dvh - 12px);
+
+        padding: 20px 11px;
+
+        border-radius: 11px;
+    }
+
+    .alert-icon {
+        width: 46px;
+        height: 46px;
+
+        margin-bottom: 9px;
+
+        font-size: 17px;
+    }
+
+    .alert-status {
+        margin-bottom: 8px;
+
+        padding: 4px 7px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.4px;
+    }
+
+    .alert-status i {
+        font-size: 8px;
+    }
+
+    .message-alert h2 {
+        margin-bottom: 7px;
+
+        font-size: 18px;
+    }
+
+    .alert-description {
+        margin-bottom: 16px;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+    .alert-primary-btn {
+        min-height: 43px;
+
+        padding: 0 9px;
+
+        font-size: 10px;
+
+        border-radius: 7px;
+    }
+
+    .alert-primary-btn i {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   320px DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+
+    .alert-overlay {
+        padding: 5px;
+    }
+
+    .message-alert {
+        max-height: calc(100dvh - 10px);
+
+        padding: 18px 9px;
+
+        border-radius: 10px;
+    }
+
+    .alert-icon {
+        width: 42px;
+        height: 42px;
+
+        margin-bottom: 8px;
+
+        font-size: 16px;
+    }
+
+    .alert-status {
+        padding: 4px 6px;
+
+        font-size: 6.5px;
+
+        gap: 4px;
+    }
+
+    .alert-status i {
+        font-size: 7px;
+    }
+
+    .message-alert h2 {
+        font-size: 17px;
+
+        letter-spacing: -0.3px;
+    }
+
+    .alert-description {
+        font-size: 10px;
+
+        line-height: 1.5;
+
+        margin-bottom: 14px;
+    }
+
+    .alert-primary-btn {
+        min-height: 41px;
+
+        font-size: 9px;
+
+        gap: 6px;
+    }
+
+    .alert-primary-btn i {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 550px) and (orientation: landscape) {
+
+    .alert-overlay {
+        align-items: flex-start;
+
+        padding: 10px;
+    }
+
+    .message-alert {
+        width: min(92vw, 500px);
+
+        max-height: calc(100dvh - 20px);
+
+        padding: 18px 24px;
+
+        margin: auto;
+    }
+
+    .alert-icon {
+        width: 44px;
+        height: 44px;
+
+        margin-bottom: 8px;
+
+        font-size: 17px;
+    }
+
+    .alert-status {
+        margin-bottom: 7px;
+
+        padding: 4px 8px;
+
+        font-size: 7px;
+    }
+
+    .message-alert h2 {
+        margin-bottom: 6px;
+
+        font-size: 18px;
+    }
+
+    .alert-description {
+        margin-bottom: 12px;
+
+        font-size: 11px;
+
+        line-height: 1.45;
+    }
+
+    .alert-primary-btn {
+        min-height: 40px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SHORT LANDSCAPE
+========================================================= */
+
+@media (max-height: 400px) and (orientation: landscape) {
+
+    .alert-overlay {
+        padding: 6px;
+    }
+
+    .message-alert {
+        max-height: calc(100dvh - 12px);
+
+        padding: 14px 20px;
+    }
+
+    .alert-icon {
+        width: 38px;
+        height: 38px;
+
+        margin-bottom: 6px;
+
+        font-size: 15px;
+    }
+
+    .alert-status {
+        margin-bottom: 5px;
+
+        padding: 3px 7px;
+
+        font-size: 6.5px;
+    }
+
+    .message-alert h2 {
+        font-size: 16px;
+
+        margin-bottom: 5px;
+    }
+
+    .alert-description {
+        font-size: 10px;
+
+        margin-bottom: 9px;
+    }
+
+    .alert-primary-btn {
+        min-height: 36px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+    .message-alert {
+        max-width: 520px;
+
+        padding: 46px 44px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .alert-overlay,
+    .message-alert,
+    .alert-primary-btn {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .alert-primary-btn {
+        min-height: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   DARK MODE SAFE OVERRIDE
+   Optional — remove if site is always light
+========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    .message-alert {
+        background:
+            linear-gradient(
+                145deg,
+                #ffffff 0%,
+                #f7f9ff 100%
+            );
+    }
+
+}

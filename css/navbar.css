@@ -1,0 +1,605 @@
+/* =========================================================
+   NAVBAR
+   Modern / Professional / Responsive
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav {
+    width: 100%;
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e8ebf2;
+
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1px;
+
+    color: #0057d9;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.links li {
+    margin: 0;
+    padding: 0;
+}
+
+.links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 8px 0;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   LINK HOVER LINE
+========================================================= */
+
+.links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #0057d9;
+
+    transition: width 0.25s ease;
+}
+
+.links a:hover {
+    color: #0057d9;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   RESUME BUTTON
+========================================================= */
+
+.resume {
+    min-width: 110px;
+    height: 42px;
+
+    padding: 0 20px;
+
+    border: 1px solid #0057d9;
+    border-radius: 7px;
+
+    background: #0057d9;
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.resume:hover {
+    background: #0048b5;
+    border-color: #0048b5;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(0, 87, 217, 0.20);
+}
+
+.resume:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid #1f2937;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.menu:hover {
+    background: #f5f8ff;
+    border-color: #0057d9;
+
+    box-shadow: 0 4px 12px rgba(0, 87, 217, 0.10);
+}
+
+
+/* =========================================================
+   FONT AWESOME MENU ICON
+========================================================= */
+
+.menu i {
+    font-size: 20px;
+    line-height: 1;
+
+    color: #1f2937;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.menu:hover i {
+    color: #0057d9;
+}
+
+
+/* =========================================================
+   MOBILE MENU OPEN STATE
+========================================================= */
+
+.links.open {
+    display: flex;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        padding: 0 5%;
+    }
+
+    .right {
+        gap: 22px;
+    }
+
+    .links {
+        gap: 22px;
+    }
+
+    .links a {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .resume {
+        min-width: 100px;
+        height: 40px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        height: 72px;
+        padding: 0 5%;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+        font-size: 26px;
+    }
+
+
+    /* =====================================================
+       RIGHT SIDE
+       IMPORTANT:
+       static allows menu to use navbar as parent
+    ===================================================== */
+
+    .right {
+        position: static;
+
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE DROPDOWN
+       FULL WIDTH
+    ===================================================== */
+
+    .links {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 10px;
+
+        box-sizing: border-box;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 3px;
+
+        background: #ffffff;
+
+        border: 1px solid #e5e9f0;
+        border-top: none;
+
+        border-radius: 0 0 10px 10px;
+
+        box-shadow:
+            0 12px 30px rgba(15, 23, 42, 0.12);
+    }
+
+
+    /* =====================================================
+       OPEN MENU
+    ===================================================== */
+
+    .links.open {
+        display: flex;
+    }
+
+
+    /* =====================================================
+       MENU ITEMS
+    ===================================================== */
+
+    .links li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* =====================================================
+       MENU LINKS
+    ===================================================== */
+
+    .links a {
+        display: flex;
+
+        width: 100%;
+
+        min-height: 46px;
+
+        padding: 12px 20px;
+
+        box-sizing: border-box;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 7px;
+
+        color: #374151;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        text-align: center;
+
+        text-decoration: none;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+
+
+    /* =====================================================
+       REMOVE DESKTOP UNDERLINE
+    ===================================================== */
+
+    .links a::after {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MOBILE LINK HOVER
+    ===================================================== */
+
+    .links a:hover {
+        background: #f3f7ff;
+        color: #0057d9;
+    }
+
+
+    /* =====================================================
+       RESUME
+    ===================================================== */
+
+    .resume {
+        min-width: 96px;
+        height: 40px;
+
+        padding: 0 16px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MENU BUTTON
+    ===================================================== */
+
+    .menu {
+        display: flex;
+    }
+
+
+    /* =====================================================
+       MENU ICON
+    ===================================================== */
+
+    .menu i {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+        height: 68px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo {
+        font-size: 24px;
+    }
+
+
+    .right {
+        gap: 8px;
+    }
+
+
+    .resume {
+        min-width: 88px;
+        height: 38px;
+
+        padding: 0 14px;
+
+        font-size: 12px;
+    }
+
+
+    .menu {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .menu i {
+        font-size: 18px;
+    }
+
+
+    /* FULL WIDTH MENU */
+
+    .links {
+        top: 68px;
+
+        width: 100%;
+
+        padding: 8px 12px;
+    }
+
+
+    .links a {
+        min-height: 44px;
+
+        padding: 11px 16px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .nav {
+        padding: 0 15px;
+    }
+
+
+    .logo {
+        font-size: 23px;
+    }
+
+
+    .resume {
+        min-width: 82px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+
+    .menu {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .menu i {
+        font-size: 17px;
+    }
+
+
+    /* FULL WIDTH MENU */
+
+    .links {
+        top: 68px;
+
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        padding: 8px 10px;
+    }
+
+
+    .links a {
+        min-height: 43px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SECTION SCROLL OFFSET
+   Prevent sticky navbar from covering section headings
+========================================================= */
+
+#home,
+#about,
+#services,
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: 90px;
+}

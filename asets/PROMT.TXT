@@ -1,0 +1,56 @@
+Create a premium, modern portfolio showcase image for a web development project called “CampusConnect”.
+
+Use the 4 provided screenshots of the CampusConnect web application:
+
+1. Home / Social Feed screen
+2. AI Chat screen
+3. Private Messaging / Chat screen
+4. Notifications screen
+
+Combine all four screenshots into ONE polished landscape composition. The screenshots must remain clearly recognizable as real UI screens, with accurate proportions and sharp details.
+
+IMPORTANT:
+
+* Do NOT add any text, headings, captions, labels, logos, icons, symbols, badges, or decorative typography outside the screenshots.
+* Do NOT generate any new UI elements.
+* Do NOT redesign or modify the content inside the screenshots.
+* Use ONLY the four provided screenshots as the main visual content.
+* Do not overlap the screenshots so much that important UI details become hidden.
+* Make the composition look like a professional software product case-study image.
+
+LAYOUT:
+Create a wide LANDSCAPE 16:9 composition suitable for a developer portfolio project card / project showcase.
+Arrange the four screenshots in a sophisticated 2x2 or slightly staggered grid composition, with balanced spacing and consistent perspective.
+Give each screenshot subtle depth and separation while keeping the interface easy to see.
+The composition should feel clean, premium, minimal and professional rather than like a collage.
+
+BACKGROUND:
+Use #667085 as the main background color.
+Create a very subtle light-to-dark tonal variation around the background, inspired by #667085.
+Use soft gradients, extremely subtle shadows and gentle ambient lighting.
+No bright colors in the background.
+
+VISUAL STYLE:
+Modern SaaS / premium web application presentation
+Minimal
+Clean
+Professional
+High-end developer portfolio aesthetic
+Soft realistic lighting
+Subtle depth
+Sharp UI screenshots
+Elegant spacing
+No unnecessary decorations
+
+IMAGE QUALITY:
+Ultra high resolution
+4K quality
+Extremely sharp screenshot details
+Clean edges
+Professional product presentation
+No distortion
+No warped screenshots
+No duplicated screens
+No extra interface elements
+
+The final result should look like a premium project showcase image for a professional Full-Stack Developer portfolio, representing the CampusConnect university social networking platform through its four main application screens.

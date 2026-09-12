@@ -1,0 +1,1236 @@
+/* =========================================================
+   ABOUT SECTION
+   Modern / Professional / Responsive
+========================================================= */
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+#about {
+    width: 100%;
+
+    padding: 110px 0;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ABOUT CONTAINER
+========================================================= */
+
+.about-container {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ABOUT LABEL
+========================================================= */
+
+.about-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #0057d9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ABOUT HEADING
+========================================================= */
+
+.about-content h2 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(32px, 3.4vw, 46px);
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   ABOUT PARAGRAPHS
+========================================================= */
+
+.about-content > p {
+    max-width: 650px;
+
+    margin: 22px 0 0;
+
+    color: #667085;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   EDUCATION CARD
+========================================================= */
+
+.education-card {
+    width: 100%;
+
+    max-width: 620px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 28px;
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+
+    background: #f8faff;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.education-card:hover {
+    border-color: #cbdaf2;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EDUCATION ICON
+========================================================= */
+
+.education-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #eaf2ff;
+    color: #0057d9;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   EDUCATION TEXT
+========================================================= */
+
+.education-text {
+    min-width: 0;
+}
+
+
+.education-text h3 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+.education-text p {
+    margin: 5px 0 0;
+
+    color: #667085;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   QUALIFICATION CARD
+========================================================= */
+
+.qualification-card {
+    margin-top: 14px;
+}
+
+
+/* =========================================================
+   ABOUT VISUAL
+========================================================= */
+
+.about-visual {
+    position: relative;
+
+    width: 100%;
+    min-height: 520px;
+}
+
+
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
+.experience-card {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+
+    width: 175px;
+    min-height: 105px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid #dbe5f4;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+}
+
+
+.experience-card strong {
+    display: block;
+
+    color: #0057d9;
+
+    font-size: 32px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+.experience-card span {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #667085;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ABOUT IMAGES
+========================================================= */
+
+.about-image {
+    position: absolute;
+
+    overflow: hidden;
+
+    border: 8px solid #ffffff;
+
+    background: #f1f4f8;
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   IMAGE ONE
+========================================================= */
+
+.image-one {
+    top: 55px;
+    right: 0;
+
+    width: 285px;
+    height: 350px;
+
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   IMAGE TWO
+========================================================= */
+
+.image-two {
+    left: 20px;
+    bottom: 25px;
+
+    width: 240px;
+    height: 205px;
+
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   PROJECTS CARD
+========================================================= */
+
+.projects-card {
+    position: absolute;
+
+    right: 20px;
+    bottom: 0;
+
+    z-index: 5;
+
+    width: 175px;
+    min-height: 105px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid #dbe5f4;
+    border-radius: 12px;
+
+    background: #0057d9;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+}
+
+
+.projects-card strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+.projects-card span {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #dbe5f4;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-container {
+        gap: 55px;
+    }
+
+
+    .about-content h2 {
+        font-size: clamp(30px, 4vw, 40px);
+    }
+
+
+    .about-content > p {
+        font-size: 14px;
+    }
+
+
+    .about-visual {
+        min-height: 480px;
+    }
+
+
+    .image-one {
+        width: 255px;
+        height: 315px;
+    }
+
+
+    .image-two {
+        width: 215px;
+        height: 185px;
+    }
+
+
+    .experience-card,
+    .projects-card {
+        width: 135px;
+        min-height: 95px;
+
+        padding: 17px;
+    }
+
+
+    .experience-card strong,
+    .projects-card strong {
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #about {
+        padding: 85px 0;
+    }
+
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+
+    .about-content {
+        max-width: 720px;
+
+        margin: 0 auto;
+    }
+
+
+    .about-label {
+        font-size: 11px;
+    }
+
+
+    .about-content h2 {
+        max-width: 700px;
+
+        font-size: clamp(30px, 5vw, 40px);
+    }
+
+
+    .about-content > p {
+        max-width: 700px;
+
+        font-size: 15px;
+    }
+
+
+    .education-card {
+        max-width: 700px;
+    }
+
+
+    .about-visual {
+        width: min(650px, 100%);
+
+        min-height: 500px;
+
+        margin: 0 auto;
+    }
+
+
+    .image-one {
+        right: 8%;
+
+        width: 280px;
+        height: 350px;
+    }
+
+
+    .image-two {
+        left: 8%;
+        bottom: 20px;
+
+        width: 250px;
+        height: 210px;
+    }
+
+
+    .experience-card {
+        left: 2%;
+
+        top: 5px;
+    }
+
+
+    .projects-card {
+        right: 2%;
+
+        bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #about {
+        padding: 70px 0;
+    }
+
+
+    .about-container {
+        width: 90%;
+
+        gap: 50px;
+    }
+
+
+    .about-label {
+        margin-bottom: 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .about-content h2 {
+        font-size: clamp(29px, 8vw, 36px);
+
+        line-height: 1.15;
+
+        letter-spacing: -1px;
+    }
+
+
+    .about-content > p {
+        margin-top: 17px;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .education-card {
+        gap: 13px;
+
+        margin-top: 23px;
+
+        padding: 15px;
+    }
+
+
+    .qualification-card {
+        margin-top: 12px;
+    }
+
+
+    .education-icon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 17px;
+    }
+
+
+    .education-text h3 {
+        font-size: 14px;
+    }
+
+
+    .education-text p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    .about-visual {
+        min-height: 430px;
+    }
+
+
+    .image-one {
+        top: 45px;
+        right: 2%;
+
+        width: 220px;
+        height: 285px;
+
+        border-width: 6px;
+
+        border-radius: 11px;
+    }
+
+
+    .image-two {
+        left: 2%;
+        bottom: 15px;
+
+        width: 185px;
+        height: 165px;
+
+        border-width: 6px;
+
+        border-radius: 11px;
+    }
+
+
+    .experience-card {
+        left: 0;
+        top: 0;
+
+        width: 140px;
+        min-height: 82px;
+
+        padding: 14px;
+
+        border-radius: 9px;
+    }
+
+
+    .experience-card strong {
+        font-size: 35px;
+    }
+
+
+    .experience-card span {
+        margin-top: 6px;
+
+        font-size: 10px;
+    }
+
+
+    .projects-card {
+        right: 0;
+        bottom: 0;
+
+        width: 140px;
+        min-height: 82px;
+
+        padding: 14px;
+
+        border-radius: 9px;
+    }
+
+
+    .projects-card strong {
+        font-size: 35px;
+    }
+
+
+    .projects-card span {
+        margin-top: 6px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    #about {
+        padding: 60px 0;
+    }
+
+
+    .about-container {
+        width: 92%;
+
+        gap: 40px;
+    }
+
+
+    .about-content h2 {
+        font-size: 28px;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .about-content > p {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .education-card {
+        align-items: flex-start;
+
+        padding: 14px;
+    }
+
+
+    .education-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+
+    .education-text h3 {
+        font-size: 13px;
+    }
+
+
+    .education-text p {
+        font-size: 11.5px;
+    }
+
+
+    .about-visual {
+        min-height: 350px;
+    }
+
+
+    .image-one {
+        right: 0;
+
+        width: 185px;
+        height: 245px;
+    }
+
+
+    .image-two {
+        left: 0;
+
+        width: 155px;
+        height: 140px;
+    }
+
+
+    .experience-card {
+        width: 105px;
+        min-height: 72px;
+
+        padding: 11px;
+    }
+
+
+    .experience-card strong,
+    .projects-card strong {
+        font-size: 22px;
+    }
+
+
+    .experience-card span,
+    .projects-card span {
+        font-size: 7px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .projects-card {
+        width: 105px;
+        min-height: 72px;
+
+        padding: 11px;
+    }
+
+
+
+
+
+    .experience-card {
+        left: 0;
+        top: 0;
+
+        width: 130px;
+        min-height: 82px;
+
+        padding: 14px;
+
+        border-radius: 9px;
+    }
+
+
+    .experience-card strong {
+        font-size: 35px;
+    }
+
+
+    .experience-card span {
+        margin-top: 6px;
+
+        font-size: 10px;
+    }
+
+
+    .projects-card {
+        right: 0;
+        bottom: 0;
+
+        width: 130px;
+        min-height: 82px;
+
+        padding: 14px;
+
+        border-radius: 9px;
+    }
+
+
+    .projects-card strong {
+        font-size: 35px;
+    }
+
+
+    .projects-card span {
+        margin-top: 6px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .about-content h2 {
+        font-size: 26px;
+    }
+
+
+    .about-content > p {
+        font-size: 12.5px;
+    }
+
+
+    .about-visual {
+        min-height: 315px;
+    }
+
+
+    .image-one {
+        width: 165px;
+        height: 220px;
+    }
+
+
+    .image-two {
+        width: 140px;
+        height: 125px;
+    }
+
+
+    .experience-card,
+    .projects-card {
+        width: 95px;
+        min-height: 65px;
+
+        padding: 9px;
+    }
+
+
+    .experience-card strong,
+    .projects-card strong {
+        font-size: 20px;
+    }
+
+
+    .experience-card span,
+    .projects-card span {
+        font-size: 6.5px;
+    }
+}
+
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 28px 6%;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    min-width: 0;
+}
+
+.footer-brand h3 {
+    margin: 0;
+
+    color: #0057d9;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+    flex-shrink: 0;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.5;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    width: 38px;
+    min-width: 38px;
+    height: 36px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-socials a i {
+    font-size: 14px;
+}
+
+.footer-socials a:hover {
+    color: #0057d9;
+    border-color: #0057d9;
+    background: #f5f8ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 7px;
+
+    background: #0057d9;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #0048b8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(0, 87, 217, 0.18);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer {
+        padding: 25px 5%;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .footer-brand {
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 24px 16px;
+    }
+
+    .footer-container {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .footer-brand {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .footer-brand h3 {
+        font-size: 22px;
+    }
+
+    .footer-brand p {
+        width: 100%;
+        max-width: 300px;
+
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+    .footer-socials {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+    .footer-socials a {
+        width: 38px;
+        min-width: 38px;
+        height: 36px;
+
+        padding: 0;
+    }
+
+    .footer-socials a span {
+        display: none;
+    }
+
+    .footer-socials a i {
+        font-size: 14px;
+    }
+
+    .back-to-top {
+        width: 36px;
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .footer {
+        padding: 22px 12px;
+    }
+
+    .footer-brand p {
+        max-width: 270px;
+
+        font-size: 10px;
+    }
+
+    .footer-socials {
+        gap: 6px;
+    }
+
+    .footer-socials a {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+    }
+
+    .footer-socials a i {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 34px;
+        height: 34px;
+    }
+
+}
